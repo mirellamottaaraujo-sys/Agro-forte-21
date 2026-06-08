@@ -1,47 +1,51 @@
-// ==========================================
-// 1. CONTADOR DE ATITUDES SUSTENTÁVEIS
-// ==========================================
-let pontosSustentaveis = 0;
-
-function registrarAtitude() {
-    pontosSustentaveis += 10;
-    
-    // Atualiza o texto na tela
-    const painelPontos = document.getElementById("pontos-txt");
-    if (painelPontos) {
-        painelPontos.innerText = `Você acumulou ${pontosSustentaveis} pontos de sementes!🌱`;
-    }
-    
-    // Mensagem de incentivo
-    alert("Parabéns! Cada pequena ação ajuda a proteger o nosso planeta. 🌍");
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
 }
 
-// ==========================================
-// 2. MINI-QUIZ DO AGRINHO
-// ==========================================
-function verificarResposta(respostaCorreta) {
-    const feedback = document.getElementById("feedback-quiz");
-    
-    if (respostaCorreta) {
-        feedback.innerText = "Correto! 🎉 A agricultura sustentável preserva o solo e a água para o futuro.";
-        feedback.style.color = "#2e7d32"; // Verde escuro
-    } else {
-        feedback.innerText = "Ops, tente novamente! 🍂 Lembre-se de que queimar a floresta ou desperdiçar água prejudica a natureza.";
-        feedback.style.color = "#c62828"; // Vermelho
-    }
+header{
+    background:#2e7d32;
+    color:white;
+    text-align:center;
+    padding:40px;
 }
 
-// ==========================================
-// 3. ALTERADOR DE TEMA (MODO NATUREZA / MODO ESCURO)
-// ==========================================
-function alternarTema() {
-    const body = document.body;
-    body.classList.toggle("modo-escuro");
-    
-    const botao = document.getElementById("btn-tema");
-    if (body.classList.contains("modo-escuro")) {
-        botao.innerText = "☀️ Modo Dia";
-    } else {
-        botao.innerText = "🌙 Modo Noite";
-    }
+section{
+    background:white;
+    margin:20px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h2{
+    color:#2e7d32;
+}
+
+button{
+    background:#4caf50;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#1b5e20;
+}
+
+#mensagem{
+    margin-top:15px;
+    font-weight:bold;
+    color:#1b5e20;
+}
+
+footer{
+    background:#1b5e20;
+    color:white;
+    text-align:center;
+    padding:20px;
 }
